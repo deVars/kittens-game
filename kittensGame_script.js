@@ -3,7 +3,7 @@
 // @namespace   http://devars.duckdns.org
 // @description resource enhancements for kittensGame
 // @match       http://bloodrizer.ru/games/kittens*
-// @version     2.13.10
+// @version     2.13.11
 // @grant       none
 // ==/UserScript==
 
@@ -345,7 +345,7 @@ function trade_resources (game) {
       already_traded = false;
   for (let i = 0, len = trade_partners.length; i < len && !already_traded; i++) {
     let current_trader = trade_partners[i],
-        chance_to_trade = Math.floor(Math.random() * 100),
+        chance_to_trade = Math.random() * 100,
         can_we_trade_with_this_race =
           chance_to_trade < DV_TRADE_WITH_PREFERRED_RACE_CHANCE;
     if (can_we_trade_with_this_race) {
